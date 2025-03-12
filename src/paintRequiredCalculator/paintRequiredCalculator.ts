@@ -1,23 +1,18 @@
 export default function paintRequiredCalculator(area: number, coveragePerLiter: number): number {
-    if (typeof area !== "number" || !Number.isInteger(area)) {
-        throw new Error("Area should be an integer");
+    if (typeof area !== "number" || isNaN(area)) {
+        throw new Error("Area should be a valid number");
     }
-    if (typeof coveragePerLiter !== "number" || !Number.isInteger(coveragePerLiter)) {
-        throw new Error("Coverage per liter should be an integer");
+    if (typeof coveragePerLiter !== "number" || isNaN(coveragePerLiter)) {
+        throw new Error("Coverage per liter should be a valid number");
     }
-    if (area < 0) {
-        throw new Error("Area should be positive");
+    if (area <= 0) {
+        throw new Error(area === 0 ? "Area should not be zero" : "Area should be positive");
     }
-    if (area === 0) {
-        throw new Error("Area should not be zero");
-    }
-    if (coveragePerLiter < 0) {
-        throw new Error("Coverage per liter should be positive");
-    }
-    if (coveragePerLiter === 0) {
-        throw new Error("Coverage per liter should not be zero");
+    if (coveragePerLiter <= 0) {
+        throw new Error(coveragePerLiter === 0 ? "Coverage per liter should not be zero" : "Coverage per liter should be positive");
     }
 
     return area / coveragePerLiter;
 }
+
 
