@@ -42,5 +42,60 @@ describe("paint required calculator", () => {
 
         expect(() => paintRequiredCalculator(area, CoveragePerLiter)).toThrow("Coverage per liter should not be zero");
     });
+test("should throw an error when area is not an integer", () => {
+        const area = 500.5; // Decimal value
+        const coveragePerLiter = 10;
+
+        expect(() => paintRequiredCalculator(area, coveragePerLiter)).toThrow("Area should be an integer");
+    });
+
+    test("should throw an error when coveragePerLiter is not an integer", () => {
+        const area = 500;
+        const coveragePerLiter = 10.5; // Decimal value
+
+        expect(() => paintRequiredCalculator(area, coveragePerLiter)).toThrow("Coverage per liter should be an integer");
+    });
+
+    test("should throw an error when area is a string", () => {
+        const area: any = "500"; // String instead of number
+        const coveragePerLiter = 10;
+
+        expect(() => paintRequiredCalculator(area, coveragePerLiter)).toThrow("Area should be an integer");
+    });
+
+    test("should throw an error when coveragePerLiter is a string", () => {
+        const area = 500;
+        const coveragePerLiter: any = "10"; // String instead of number
+
+        expect(() => paintRequiredCalculator(area, coveragePerLiter)).toThrow("Coverage per liter should be an integer");
+    });
+
+    test("should throw an error when area is null", () => {
+        const area: any = null;
+        const coveragePerLiter = 10;
+
+        expect(() => paintRequiredCalculator(area, coveragePerLiter)).toThrow("Area should be an integer");
+    });
+
+    test("should throw an error when coveragePerLiter is null", () => {
+        const area = 500;
+        const coveragePerLiter: any = null;
+
+        expect(() => paintRequiredCalculator(area, coveragePerLiter)).toThrow("Coverage per liter should be an integer");
+    });
+
+    test("should throw an error when area is undefined", () => {
+        const area: any = undefined;
+        const coveragePerLiter = 10;
+
+        expect(() => paintRequiredCalculator(area, coveragePerLiter)).toThrow("Area should be an integer");
+    });
+
+    test("should throw an error when coveragePerLiter is undefined", () => {
+        const area = 500;
+        const coveragePerLiter: any = undefined;
+
+        expect(() => paintRequiredCalculator(area, coveragePerLiter)).toThrow("Coverage per liter should be an integer");
+    });
 });
 
