@@ -31,12 +31,6 @@ You will need to install dependencies by using:
 npm install
 ```
 
-### 2. Install Dependencies
-Run this command to install all necessary dependencies:
-```bash
-npm install
-```
-
 
 ---
 
