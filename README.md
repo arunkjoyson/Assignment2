@@ -2,13 +2,24 @@
 
 ## Purpose
 
-This repository houses the code we require for examples and assignments.
+This repository houses the code for thew assignment.
 
 ## Repository Usage
 
-This repository will contain branches of code.
+This repository will contain the updated  code.
+``` https://github.com/arunkjoyson/Assignment2.git ``` 
+clone this repo and do 
+``` cd src ```
 
-Please refer to your instructor's directions on how to use this repository.
+
+## Prerequisites
+
+Before getting started, ensure the following are installed on your system:
+1. [Node.js](https://nodejs.org/) (v14 or later)
+2. [npm](https://www.npmjs.com/) (comes with Node.js)
+3. [TypeScript](https://www.typescriptlang.org/) (v4 or later)
+
+If you don’t have these installed, download and install them first.
 
 ## Branch Usage
 
@@ -20,40 +31,28 @@ You will need to install dependencies by using:
 npm install
 ```
 
-**Running The Project**
-
-To run the project, you must first build the project:
-
+### 2. Install Dependencies
+Run this command to install all necessary dependencies:
 ```bash
-npm run build
+npm install
 ```
 
-followed by:
 
-```bash
-npm start
-```
+---
 
-Note:  if you make a change in the production code, you must `build` & `start`.
-Otherwise, your changes will not be reflected.
+## Running the Tests
 
-**Running The Tests**
+This project uses Jest to test the functionality of the volume calculation function. To run the tests:
 
-To run the tests, you can use
+1. **Install Jest (if not already installed)**:
+   ```bash
+   npm install --save-dev jest @types/jest ts-jest
+   ```
 
-```bash
-npm run test
-```
+2. **Run Tests**:
+   Execute the test suite using the following command:
+   ```bash
+   npm test
+   ```
 
-To keep the tests running, you can use
-
-```bash
-npm run test -- --watch
-```
-
-To run a specific test, you can use
-
-```bash
-npm run test [my test name]
-```
-
+The test results will show the test covereage for calculateCanvasSize and paintRequiredCalculator functionalities
